@@ -1,0 +1,65 @@
+{
+  "manifest_version": 3,
+  "name": "Context Lens",
+  "version": "1.0",
+  "description": "AI-powered contextual analysis for news articles.",
+  "permissions": [
+    "storage",
+    "scripting"
+  ],
+  "optional_host_permissions": [
+    "https://*.ynet.co.il/*",
+    "https://*.walla.co.il/*",
+    "https://*.n12.co.il/*",
+    "https://*.haaretz.co.il/*",
+    "https://*.maariv.co.il/*",
+    "https://*.israelhayom.co.il/*",
+    "https://*.globes.co.il/*",
+    "https://*.themarker.com/*",
+    "https://*.calcalist.co.il/*",
+    "https://*.13tv.co.il/*",
+    "https://*.kan.org.il/*",
+    "https://*.inn.co.il/*",
+    "https://*.now14.co.il/*",
+    "https://*.timesofisrael.com/*",
+    "https://*.jpost.com/*",
+    "https://*.haaretz.com/*",
+    "https://*.ynetnews.com/*",
+    "https://*.panet.co.il/*",
+    "https://*.alarab.com/*",
+    "https://*.bbc.com/*",
+    "https://*.cnn.com/*",
+    "https://*.reuters.com/*",
+    "https://*.apnews.com/*",
+    "https://*.nytimes.com/*",
+    "https://*.theguardian.com/*",
+    "https://*.wsj.com/*",
+    "https://*.aljazeera.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup/popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png"
+    }
+  },
+  "options_page": "options/options.html",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "assets/*"
+      ],
+      "matches": [
+        "<all_urls>"
+      ]
+    }
+  ]
+}

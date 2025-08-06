@@ -1,0 +1,144 @@
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    color: #333;
+    margin: 0;
+    width: 400px; /* Fixed width for the popup */
+}
+
+.container {
+    padding: 15px;
+}
+
+.header {
+    text-align: center;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+h1 {
+    font-size: 18px;
+    margin: 0;
+    color: #1c1e21;
+}
+
+.view {
+    text-align: center;
+}
+
+.view p {
+    font-size: 15px;
+}
+
+.view .small-text {
+    font-size: 12px;
+    color: #606770;
+}
+
+button {
+    background-color: #1877f2;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+button:hover {
+    background-color: #166fe5;
+}
+
+/* Tab Bar Styling */
+.tab-bar {
+    display: flex;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 15px;
+}
+
+.tab-btn {
+    flex: 1;
+    padding: 10px;
+    background: #f0f2f5;
+    border: none;
+    cursor: pointer;
+    border-radius: 0;
+    color: #606770;
+    font-weight: 500;
+}
+
+.tab-btn.active {
+    background: none;
+    color: #1877f2;
+    border-bottom: 3px solid #1877f2;
+    font-weight: 600;
+}
+
+.tab-panel {
+    display: none;
+    text-align: left;
+}
+
+.tab-panel.active {
+    display: block;
+}
+
+/* Analysis Content Styling */
+#summary-tab h3 {
+    font-size: 16px;
+    color: #1c1e21;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 5px;
+    margin-top: 0;
+}
+
+#summary-tab ul {
+    padding-left: 20px;
+    margin-top: 0;
+}
+
+#summary-tab li {
+    margin-bottom: 8px;
+}
+
+#summary-tab p {
+    line-height: 1.5;
+}
+
+.fact-check-item {
+    border: 1px solid #e9ebee;
+    border-radius: 6px;
+    padding: 12px;
+    margin-bottom: 12px;
+    background-color: #f7f7f7;
+}
+
+.fact-check-item p {
+    margin: 0 0 8px 0;
+}
+
+.fact-check-item .claim {
+    font-weight: bold;
+}
+
+.fact-check-item .source a {
+    color: #1877f2;
+    text-decoration: none;
+}
+.fact-check-item .source a:hover {
+    text-decoration: underline;
+}
+
+.fact-check-item .status span {
+    font-weight: bold;
+    padding: 2px 6px;
+    border-radius: 4px;
+    color: white;
+}
+
+.status-confirmed { background-color: #4caf50; }
+.status-contradicted { background-color: #f44336; }
+.status-lacks-context { background-color: #ff9800; }
