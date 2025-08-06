@@ -1,58 +1,15 @@
 // --- Main Execution ---
 
-// A list of Israeli media outlets to target
-const TARGET_HOSTS = [
-    // Israeli (Hebrew)
-    'www.ynet.co.il', 'ynet.co.il',
-    'www.walla.co.il', 'walla.co.il',
-    'www.n12.co.il', 'n12.co.il',
-    'www.haaretz.co.il', 'haaretz.co.il',
-    'www.maariv.co.il', 'maariv.co.il',
-    'www.israelhayom.co.il', 'israelhayom.co.il',
-    'www.globes.co.il', 'globes.co.il',
-    'www.themarker.com', 'themarker.com',
-    'www.calcalist.co.il', 'calcalist.co.il',
-    'www.13tv.co.il', '13tv.co.il',
-    'www.kan.org.il', 'kan.org.il',
-    'www.inn.co.il', 'inn.co.il',
-    'www.now14.co.il', 'now14.co.il',
-    // Israeli (English)
-    'www.timesofisrael.com', 'timesofisrael.com',
-    'www.jpost.com', 'jpost.com',
-    'www.haaretz.com', 'haaretz.com',
-    'www.ynetnews.com', 'ynetnews.com',
-    // Israeli (Arabic)
-    'www.panet.co.il', 'panet.co.il',
-    'www.alarab.com', 'alarab.com',
-    // International
-    'www.bbc.com', 'bbc.com',
-    'www.cnn.com', 'cnn.com',
-    'www.reuters.com', 'reuters.com',
-    'apnews.com',
-    'www.nytimes.com', 'nytimes.com',
-    'www.theguardian.com', 'theguardian.com',
-    'www.wsj.com', 'wsj.com',
-    'www.aljazeera.com', 'aljazeera.com'
-];
-
 // A global variable to hold analysis data for popover access
 let analysisDataStore = {};
 
-// Run the script only after the DOM is fully loaded
-window.addEventListener('load', () => {
-    main();
-});
-
+// The main function is now called directly when the script is injected.
+main();
 
 function main() {
-    // 1. Activation Check: Ensure we are on a target website.
-    if (!TARGET_HOSTS.includes(window.location.host)) {
-        console.log('Context Lens: Not a target site.');
-        return;
-    }
-    console.log('Context Lens: Target site detected.');
+    console.log('Context Lens: Content script injected and running.');
 
-    // 2. DOM Parsing: Find the main article content.
+    // 1. DOM Parsing: Find the main article content.
     const articleElement = document.querySelector('article, [class*="article-body"], [id*="article-content"], [class*="article__body"]');
     if (!articleElement) {
         console.log('Context Lens: Could not find article content on the page.');

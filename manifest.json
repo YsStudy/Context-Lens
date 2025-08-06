@@ -4,9 +4,10 @@
   "version": "1.0",
   "description": "AI-powered contextual analysis for news articles.",
   "permissions": [
-    "storage"
+    "storage",
+    "scripting"
   ],
-  "host_permissions": [
+  "optional_host_permissions": [
     "https://*.ynet.co.il/*",
     "https://*.walla.co.il/*",
     "https://*.n12.co.il/*",
@@ -38,13 +39,6 @@
   "background": {
     "service_worker": "background.js"
   },
-  "content_scripts": [
-    {
-      "matches": ["<all_urls>"],
-      "js": ["content/content.js"],
-      "css": ["content/content.css"]
-    }
-  ],
   "action": {
     "default_popup": "popup/popup.html",
     "default_icon": {
@@ -60,8 +54,12 @@
   },
   "web_accessible_resources": [
     {
-      "resources": ["assets/*"],
-      "matches": ["<all_urls>"]
+      "resources": [
+        "assets/*"
+      ],
+      "matches": [
+        "<all_urls>"
+      ]
     }
   ]
 }

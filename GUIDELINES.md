@@ -51,10 +51,3 @@ This script will create a file named `context-lens-build.zip` in the project's r
 
 4.  **Submit for Review:**
     *   Once everything is filled out, submit the extension for review by Google.
-
-## 4. Important Note on Permissions
-
-When you update the extension with **new domains** in the `host_permissions` section of the `manifest.json` file, please be aware of the following:
-
-*   **Existing users will be prompted to accept the new permissions.** The extension will be automatically disabled for them until they manually approve the update. This is a security measure enforced by Chrome to ensure users are aware of what new websites the extension can access.
-*   For a future version, this behavior could be avoided by refactoring the extension to use the `optional_permissions` API, which would require a different user workflow (e.g., clicking to activate the extension on a new site).
