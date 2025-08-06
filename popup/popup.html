@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Context Lens</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Context Lens</h1>
+        </div>
+
+        <!-- View: Loading -->
+        <div id="loading-view" class="view">
+            <p>Loading analysis...</p>
+        </div>
+
+        <!-- View: No API Key -->
+        <div id="no-key-view" class="view" style="display: none;">
+            <p>An API key is required for analysis.</p>
+            <button id="options-btn">Add API Key</button>
+        </div>
+
+        <!-- View: Page Not Analyzed -->
+        <div id="not-analyzed-view" class="view" style="display: none;">
+            <p>This page has not been analyzed.</p>
+            <p class="small-text">Navigate to a supported news article. The analysis will begin automatically.</p>
+        </div>
+
+        <!-- View: Analysis Found -->
+        <div id="analysis-view" class="view" style="display: none;">
+            <div class="tab-bar">
+                <button class="tab-btn active" data-tab="summary-tab">Summary</button>
+                <button class="tab-btn" data-tab="fact-check-tab">Fact-Check</button>
+            </div>
+            <div id="tab-content">
+                <!-- Summary Tab -->
+                <div id="summary-tab" class="tab-panel active">
+                    <div id="executive-summary-content"></div>
+                </div>
+                <!-- Fact-Check Tab -->
+                <div id="fact-check-tab" class="tab-panel">
+                    <div id="fact-check-report-content"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="popup.js"></script>
+</body>
+</html>
